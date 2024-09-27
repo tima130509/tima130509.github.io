@@ -1,0 +1,15 @@
+header{
+    background-color:  #6A52FF;
+    color: white;
+}
+main{
+    width: 50%;
+}
+footer{ 
+    background-color: #464646;
+    color: white;
+}
+a{
+    text-decoration: none;
+    color: green;
+}
