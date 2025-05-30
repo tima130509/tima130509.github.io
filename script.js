@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Подсветка активного пункта меню (исправлено сравнение URL)
     const navItems = document.querySelectorAll('.nav-item');
     const currentPath = window.location.pathname;
+    
+    navItems.forEach(item => {  // Исправлено: добавлено правильное открытие forEach
         const itemHref = item.getAttribute('href');
         const itemPath = new URL(itemHref, window.location.origin).pathname;
         
@@ -10,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             item.classList.remove('active');
         }
-    });
+    });  // Исправлено: добавлено закрытие forEach
 
     // Анимация карточек при загрузке
     const cards = document.querySelectorAll('.card');
@@ -50,20 +52,26 @@ document.addEventListener('DOMContentLoaded', function() {
             
             if (!data) return;
             
-            const rect = point.getBoundingClientRect();
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            
             tooltip.innerHTML = `
                 <h4>${data.title}</h4>
                 <p>${data.description}</p>
             `;
             
-            // Позиционирование
-            const x = rect.left + window.scrollX;
-            const y = rect.top + window.scrollY;
+            // Позиционирование относительно курсора/касания
+            let x, y;
+            if (e.type.includes('touch')) {
+                // Для касания
+                const touch = e.touches[0];
+                x = touch.clientX;
+                y = touch.clientY;
+            } else {
+                // Для мыши
+                x = e.clientX;
+                y = e.clientY;
+            }
             
-            tooltip.style.left = `${x + rect.width/2 + 15}px`;
-            tooltip.style.top = `${y + rect.height/2}px`;
+            tooltip.style.left = `${x + 15}px`;
+            tooltip.style.top = `${y + 15}px`;
             tooltip.classList.add('active');
         };
 
@@ -74,10 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // ПК-версия
         point.addEventListener('mouseenter', showTooltip);
-        point.addEventListener('mousemove', (e) => {
-            tooltip.style.left = `${e.pageX + 15}px`;
-            tooltip.style.top = `${e.pageY + 15}px`;
-        });
+        point.addEventListener('mousemove', showTooltip);
         point.addEventListener('mouseleave', hideTooltip);
 
         // Мобильная версия
@@ -86,14 +91,18 @@ document.addEventListener('DOMContentLoaded', function() {
             timeoutId = setTimeout(() => showTooltip(e), 300);
         });
         
+        point.addEventListener('touchmove', (e) => {
+            clearTimeout(timeoutId);
+            showTooltip(e);
+        });
+        
         point.addEventListener('touchend', () => {
             clearTimeout(timeoutId);
             hideTooltip();
         });
     });
 
-
-    // Плавная прокрутка для якорей (исправлен targetElement)
+    // Плавная прокрутка для якорей
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -165,42 +174,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (document.querySelector('.filter-buttons')) handleFilters('.filter-btn', '.table tbody tr', 'filter');
     if (document.querySelector('.platform-filter')) handleFilters('.platform-filter .filter-btn', '.cheat-row', 'platform');
 
-    // Обработка точек на карте (добавлена проверка существования элемента)
-    const locationDetails = document.getElementById('location-details');
-    if (locationDetails) {
-        const mapPoints = document.querySelectorAll('.map-point');
-        const locationData = {
-            downtown: {
-                title: "Даунтаун Лос-Сантоса",
-                description: "Деловой центр города с небоскребами и офисными зданиями."
-            },
-            vinewood: {
-                title: "Вайнвуд",
-                description: "Район, похожий на Голливуд, с знаками на холмах и домами знаменитостей."
-            },
-            airport: {
-                title: "Аэропорт Лос-Сантоса",
-                description: "Международный аэропорт с взлетно-посадочными полосами и ангарами."
-            }
-        };
-
-        mapPoints.forEach(point => {
-            point.addEventListener('click', () => {
-                const location = point.dataset.location;
-                const data = locationData[location];
-                
-                if (data) {
-                    locationDetails.innerHTML = `
-                        <h3>${data.title}</h3>
-                        <p>${data.description}</p>
-                        <a href="#" class="btn btn-small">Подробнее о локации</a>
-                    `;
-                }
-            });
-        });
-    }
-
-    // Обработчики для модов (добавлена проверка существования элементов)
+    // Обработчики для модов
     const modSortSelect = document.getElementById('mod-sort');
     const modVersionSelect = document.getElementById('mod-game-version');
     
@@ -221,7 +195,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Обработка видео (добавлена проверка)
+    // Обработка видео
     document.querySelectorAll('.play-button').forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
@@ -233,3 +207,4 @@ document.addEventListener('DOMContentLoaded', function() {
     if (document.querySelector('.leaderboard')) {
         console.log('Загрузка данных рейтинга...');
     }
+});
