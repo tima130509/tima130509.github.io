@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTA V Portal - GTA Online</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Боковое меню -->
+    <div class="sidebar">
+        <nav class="sidebar-nav">
+            <a href="index.html" class="nav-item">
+                <i class="fas fa-home nav-icon"></i>
+                <span class="nav-text">Главная</span>
+            </a>
+            <a href="community.html" class="nav-item">
+                <i class="fas fa-users nav-icon"></i>
+                <span class="nav-text">Сообщество</span>
+            </a>
+            <a href="database.html" class="nav-item">
+                <i class="fas fa-database nav-icon"></i>
+                <span class="nav-text">База данных</span>
+            </a>
+            <a href="gaid.html" class="nav-item">
+                <i class="fas fa-book nav-icon"></i>
+                <span class="nav-text">Гайды</span>
+            </a>
+            <a href="mod.html" class="nav-item">
+                <i class="fas fa-puzzle-piece nav-icon"></i>
+                <span class="nav-text">Моды</span>
+            </a>
+            <a href="chit.html" class="nav-item">
+                <i class="fas fa-code nav-icon"></i>
+                <span class="nav-text">Читы</span>
+            </a>
+            <a href="online.html" class="nav-item active">
+                <i class="fas fa-globe nav-icon"></i>
+                <span class="nav-text">GTA Online</span>
+            </a>
+        </nav>
+    </div>
+    
+    <!-- Основное содержимое -->
+    <div class="main-content">
+        <header style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/46.jpg');">
+            <div class="header-content">
+                <h1>GTA Online</h1>
+                <p>Многопользовательский режим Grand Theft Auto V: ограбления, бизнесы, гонки и бесконечные возможности</p>
+            </div>
+        </header>
+
+        <div class="section">
+            <h2 class="section-title">Актуальные события</h2>
+            <div class="section-content">
+                <div class="event-card">
+                    <div class="event-badge">Новое</div>
+                    <img src="images/47.jpg" alt="Событие" class="event-image">
+                    <div class="event-info">
+                        <h3>2x GTA$ на все рейды</h3>
+                        <div class="event-dates">
+                            <i class="fas fa-calendar-alt"></i> 15.10 - 22.10.2023
+                        </div>
+                        <p>Удвоенные награды за все виды криминальной деятельности</p>
+                        <div class="event-rewards">
+                            <span class="reward"><i class="fas fa-coins"></i> +50% RP</span>
+                            <span class="reward"><i class="fas fa-gem"></i> Эксклюзивная одежда</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event-grid">
+                    <div class="mini-event">
+                        <img src="images/48.webp" alt="Мини-ивент" class="mini-event-image">
+                        <div class="mini-event-content">
+                            <h4>Скидки до 40%</h4>
+                            <p>На недвижимость и транспорт</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mini-event">
+                        <img src="images/49webp.webp" alt="Мини-ивент" class="mini-event-image">
+                        <div class="mini-event-content">
+                            <h4>Тройной опыт</h4>
+                            <p>В режиме "Захват"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Бизнесы и предприятия</h2>
+            <div class="section-content">
+                <div class="business-tabs">
+                    <button class="business-tab active" data-business="legal">Легальные</button>
+                    <button class="business-tab" data-business="illegal">Нелегальные</button>
+                </div>
+
+                <div class="business-content active" id="legal">
+                    <div class="business-grid">
+                        <div class="business-card">
+                            <img src="images/50.jpg" alt="Автосалон" class="business-image">
+                            <div class="business-info">
+                                <h3>Автосалон</h3>
+                                <p>Зарабатывайте на продаже автомобилей</p>
+                                <div class="business-stats">
+                                    <span><i class="fas fa-dollar-sign"></i> Доход: $50k/час</span>
+                                    <span><i class="fas fa-shield-alt"></i> Риск: Низкий</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="business-card">
+                            <img src="images/52.jpg" alt="Ночной клуб" class="business-image">
+                            <div class="business-info">
+                                <h3>Ночной клуб</h3>
+                                <p>Привлекайте знаменитостей и зарабатывайте</p>
+                                <div class="business-stats">
+                                    <span><i class="fas fa-dollar-sign"></i> Доход: $80k/час</span>
+                                    <span><i class="fas fa-shield-alt"></i> Риск: Средний</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="business-content" id="illegal">
+                    <div class="business-grid">
+                        <div class="business-card">
+                            <img src="images/54.webp" alt="Бункер" class="business-image">
+                            <div class="business-info">
+                                <h3>Оружейный бункер</h3>
+                                <p>Нелегальное производство оружия</p>
+                                <div class="business-stats">
+                                    <span><i class="fas fa-dollar-sign"></i> Доход: $120k/час</span>
+                                    <span><i class="fas fa-shield-alt"></i> Риск: Высокий</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="business-card">
+                            <img src="images/55.jpg" alt="Лаборатория" class="business-image">
+                            <div class="business-info">
+                                <h3>Метамфетамин</h3>
+                                <p>Подпольное производство наркотиков</p>
+                                <div class="business-stats">
+                                    <span><i class="fas fa-dollar-sign"></i> Доход: $150k/час</span>
+                                    <span><i class="fas fa-shield-alt"></i> Риск: Очень высокий</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Рейтинги игроков</h2>
+            <div class="section-content">
+                <div class="leaderboard">
+                    <div class="leaderboard-header">
+                        <div>#</div>
+                        <div>Игрок</div>
+                        <div>Уровень</div>
+                        <div>Доход</div>
+                        <div>Рейтинг</div>
+                    </div>
+                    
+                    <div class="leaderboard-row">
+                        <div>1</div>
+                        <div class="player-info">
+                            <img src="images/56.jpg" alt="Игрок 1" class="player-avatar">
+                            <span>LosSantosKing</span>
+                        </div>
+                        <div>785</div>
+                        <div>$2.3B</div>
+                        <div><i class="fas fa-star"></i> 9.8</div>
+                    </div>
+
+                    <div class="leaderboard-row">
+                        <div>2</div>
+                        <div class="player-info">
+                            <img src="images/57.png" alt="Игрок 2" class="player-avatar">
+                            <span>HeistMaster</span>
+                        </div>
+                        <div>654</div>
+                        <div>$1.9B</div>
+                        <div><i class="fas fa-star"></i> 9.5</div>
+                    </div>
+
+                    <div class="leaderboard-row">
+                        <div>3</div>
+                        <div class="player-info">
+                            <img src="images/59.jpg" alt="Игрок 3" class="player-avatar">
+                            <span>RacingQueen</span>
+                        </div>
+                        <div>598</div>
+                        <div>$1.5B</div>
+                        <div><i class="fas fa-star"></i> 9.3</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Ограбления</h2>
+            <div class="section-content">
+                <div class="heist-grid">
+                    <div class="heist-card">
+                        <div class="heist-image" style="background-image: url('images/60.jpg');">
+                            <div class="heist-difficulty">Сложность: ★★★★☆</div>
+                        </div>
+                        <div class="heist-info">
+                            <h3>Казино Diamond</h3>
+                            <div class="heist-reward">
+                                <i class="fas fa-coins"></i> До $2.5M
+                            </div>
+                            <a href="#" class="btn">Стратегия</a>
+                        </div>
+                    </div>
+
+                    <div class="heist-card">
+                        <div class="heist-image" style="background-image: url('images/61.jpg');">
+                            <div class="heist-difficulty">Сложность: ★★★★★</div>
+                        </div>
+                        <div class="heist-info">
+                            <h3>С-Перро</h3>
+                            <div class="heist-reward">
+                                <i class="fas fa-coins"></i> До $4.3M
+                            </div>
+                            <a href="#" class="btn">Стратегия</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p class="footer-text">© 2023 GTA V Portal. Все права защищены.</p>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

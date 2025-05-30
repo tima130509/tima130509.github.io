@@ -3,51 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Тимофей Попов</title>
-    <link rel="stylesheet" href="style.css">
+    <title>GTA V Portal - Главная</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>Всем привет!</h1>
-        <p>Меня зовут Тимофей Попов.</p>
-    </header>
-
-    <main>
-
-        <section>
-            <ul>Мои хобби:</ul>
-                <li><a href="#G">Я играю на гитаре</a></li>
-                <li><a href="#S">создание сайтов</a></li>
-                <li><a href="#V">дизайн веб-интерфейсов</a></li>
-                <li><a href="#K">Олимпиадное программирование</a></li>
-                <li><a href="#A">Python</a></li>
-        </section>
-        <section>
-            <p id="G">Я играл на гитаре 8 лет в музыкальной школе, и в прошлом учебном году закончил ее.</p>
-        </section>
-        <section>
-            <p id="S">В этом году пошел на создание сайтов в Кванториум</p>
-        </section>
-        <section>
-            <p id="V">В этом году пошел на дизайн веб-интерфейсов в Кванториум</p>
-        </section>
-        <section>
-            <p id="K">Еще я в этом году пошел в ПетрГУ в Клуб Творчества Программистов на олимпиадное программирование с языком c++</p>
-        </section>
-        <section>
-            <p id="A">В прошлом году окончил курс по Python в проекте Алгоритмика "С нуля до первых игр"</p>
-        </section>
-        <section>
-            <a href="./index2.html">на вторую страницу</a>
-        </section>
-    </main>
-        <footer>
-            <h2>Конец</h2>
-            <h2>Наши контакты:</h2>
-            <p>8 911 437-78-03</p>
-            <p>@Все права не защищены.</p>
-                
-        </footer>
+    <!-- Боковое меню -->
+    <div class="sidebar">
+        <nav class="sidebar-nav">
+            <a href="index.html" class="nav-item active">
+                <i class="fas fa-home nav-icon"></i>
+                <span class="nav-text">Главная</span>
+            </a>
+            <a href="community.html" class="nav-item">
+                <i class="fas fa-users nav-icon"></i>
+                <span class="nav-text">Сообщество</span>
+            </a>
+            <a href="database.html" class="nav-item">
+                <i class="fas fa-database nav-icon"></i>
+                <span class="nav-text">База данных</span>
+            </a>
+            <a href="gaid.html" class="nav-item">
+                <i class="fas fa-book nav-icon"></i>
+                <span class="nav-text">Гайды</span>
+            </a>
+            <a href="mod.html" class="nav-item">
+                <i class="fas fa-puzzle-piece nav-icon"></i>
+                <span class="nav-text">Моды</span>
+            </a>
+            <a href="chit.html" class="nav-item">
+                <i class="fas fa-code nav-icon"></i>
+                <span class="nav-text">Читы</span>
+            </a>
+            <a href="online.html" class="nav-item">
+                <i class="fas fa-globe nav-icon"></i>
+                <span class="nav-text">GTA Online</span>
+            </a>
+        </nav>
+    </div>
     
+    <!-- Основное содержимое -->
+    <div class="main-content">
+        <header style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/12.webp');">
+            <div class="header-content">
+                <h1>GTA V Portal</h1>
+                <p>Полное руководство по Grand Theft Auto V: гайды, моды, читы, база данных и многое другое для лучшего игрового опыта</p>
+            </div>
+        </header>
+        
+        <div class="section">
+            <h2 class="section-title">Новости и обновления</h2>
+            <div class="section-content">
+                <p>Последние новости из мира GTA V и GTA Online. Будьте в курсе всех обновлений, событий и изменений в игре.</p>
+                
+                <div class="card-grid">
+                    <div class="card">
+                        <img src="images/5.jpg" alt="GTA V" class="card-img">
+                        <div class="card-body">
+                            <h3 class="card-title">Новое DLC "Los Santos Summer Special"</h3>
+                            <p class="card-text">Обзор нового летнего обновления с новыми миссиями, автомобилями и активностями.</p>
+                            <a href="#" class="btn">Подробнее</a>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <img src="images/4.jpg" alt="GTA Online" class="card-img">
+                        <div class="card-body">
+                            <h3 class="card-title">2x GTA$ на все рейды</h3>
+                            <p class="card-text">На этой неделе удвоенные награды за все виды рейдов и ограблений в GTA Online.</p>
+                            <a href="#" class="btn">Подробнее</a>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <img src="images/3.jpg" alt="GTA Mods" class="card-img">
+                        <div class="card-body">
+                            <h3 class="card-title">Лучшие моды июля 2023</h3>
+                            <p class="card-text">Подборка самых интересных модификаций для GTA V за последний месяц.</p>
+                            <a href="#" class="btn">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">Популярные разделы</h2>
+            <div class="section-content">
+                <div class="card-grid">
+                    <a href="gaid.html" class="card">
+                        <img src="images/2.jpg" alt="Гайды" class="card-img">
+                        <div class="card-body">
+                            <h3 class="card-title">Гайды</h3>
+                            <p class="card-text">Полные прохождения миссий, секреты и советы по игре</p>
+                        </div>
+                    </a>
+                    
+                    <a href="mod.html" class="card">
+                        <img src="images/8.jpg" alt="Моды" class="card-img">
+                        <div class="card-body">
+                            <h3 class="card-title">Моды</h3>
+                            <p class="card-text">Лучшие модификации для улучшения игры</p>
+                        </div>
+                    </a>
+                    
+                    <a href="online.html" class="card">
+                        <img src="images/13.webp" alt="GTA Online" class="card-img">
+                        <div class="card-body">
+                            <h3 class="card-title">GTA Online</h3>
+                            <p class="card-text">Все о многопользовательском режиме</p>
+                        </div>
+                    </a>
+                    
+                    <a href="chit.html" class="card">
+                        <img src="images/12.webp" alt="Читы" class="card-img">
+                        <div class="card-body">
+                            <h3 class="card-title">Читы</h3>
+                            <p class="card-text">Коды и читы для одиночной игры</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p class="footer-text">© 2025 GTA V Portal. Все права защищены.</p>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

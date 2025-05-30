@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTA V Portal - Моды</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Боковое меню -->
+    <div class="sidebar">
+        <nav class="sidebar-nav">
+            <a href="index.html" class="nav-item">
+                <i class="fas fa-home nav-icon"></i>
+                <span class="nav-text">Главная</span>
+            </a>
+            <a href="community.html" class="nav-item">
+                <i class="fas fa-users nav-icon"></i>
+                <span class="nav-text">Сообщество</span>
+            </a>
+            <a href="database.html" class="nav-item">
+                <i class="fas fa-database nav-icon"></i>
+                <span class="nav-text">База данных</span>
+            </a>
+            <a href="gaid.html" class="nav-item">
+                <i class="fas fa-book nav-icon"></i>
+                <span class="nav-text">Гайды</span>
+            </a>
+            <a href="mod.html" class="nav-item active">
+                <i class="fas fa-puzzle-piece nav-icon"></i>
+                <span class="nav-text">Моды</span>
+            </a>
+            <a href="chit.html" class="nav-item">
+                <i class="fas fa-code nav-icon"></i>
+                <span class="nav-text">Читы</span>
+            </a>
+            <a href="online.html" class="nav-item">
+                <i class="fas fa-globe nav-icon"></i>
+                <span class="nav-text">GTA Online</span>
+            </a>
+        </nav>
+    </div>
+    
+    <!-- Основное содержимое -->
+    <div class="main-content">
+        <header style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/33.jpg');">
+            <div class="header-content">
+                <h1>Моды для GTA V</h1>
+                <p>Лучшие модификации для Grand Theft Auto V: улучшение графики, новые машины, оружие, персонажи и геймплей</p>
+            </div>
+        </header>
+        
+        <div class="section">
+            <h2 class="section-title">Категории модов</h2>
+            <div class="section-content">
+                <div class="mod-categories">
+                    <a href="#graphics" class="category-card" style="background-image: url('images/34.jpg');">
+                        <div class="category-overlay">
+                            <h3>Графика</h3>
+                            <p>ENB, Reshade, текстуры</p>
+                        </div>
+                    </a>
+                    
+                    <a href="#vehicles" class="category-card" style="background-image: url('images/35.jpg');">
+                        <div class="category-overlay">
+                            <h3>Транспорт</h3>
+                            <p>Новые машины, самолеты, лодки</p>
+                        </div>
+                    </a>
+                    
+                    <a href="#weapons" class="category-card" style="background-image: url('images/36.webp');">
+                        <div class="category-overlay">
+                            <h3>Оружие</h3>
+                            <p>Новые виды оружия и механики</p>
+                        </div>
+                    </a>
+                    
+                    <a href="#gameplay" class="category-card" style="background-image: url('images/37.jpeg');">
+                        <div class="category-overlay">
+                            <h3>Геймплей</h3>
+                            <p>Изменение механик игры</p>
+                        </div>
+                    </a>
+                    
+                    <a href="#characters" class="category-card" style="background-image: url('images/39.jpg');">
+                        <div class="category-overlay">
+                            <h3>Персонажи</h3>
+                            <p>Новые модели и скины</p>
+                        </div>
+                    </a>
+                    
+                    <a href="#maps" class="category-card" style="background-image: url('images/40.jpg');">
+                        <div class="category-overlay">
+                            <h3>Карты</h3>
+                            <p>Новые локации и здания</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">Топ модов месяца</h2>
+            <div class="section-content">
+                <div class="mod-filters">
+                    <div class="filter-group">
+                        <label for="mod-sort">Сортировка:</label>
+                        <select id="mod-sort" class="filter-select">
+                            <option value="popular">По популярности</option>
+                            <option value="newest">По новизне</option>
+                            <option value="rating">По рейтингу</option>
+                            <option value="downloads">По загрузкам</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="mod-game-version">Версия игры:</label>
+                        <select id="mod-game-version" class="filter-select">
+                            <option value="all">Все версии</option>
+                            <option value="1.0.2699">1.0.2699 (Последняя)</option>
+                            <option value="1.0.2372">1.0.2372</option>
+                            <option value="1.0.2060">1.0.2060</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="mod-list">
+                    <div class="mod-card featured">
+                        <div class="mod-badge">Выбор редакции</div>
+                        <img src="images/41.jpg" alt="Мод NaturalVision" class="mod-image">
+                        <div class="mod-content">
+                            <h3 class="mod-title">NaturalVision Remastered</h3>
+                            <div class="mod-meta">
+                                <span class="mod-author"><i class="fas fa-user"></i> Razed</span>
+                                <span class="mod-version"><i class="fas fa-code-branch"></i> 2.1.4</span>
+                                <span class="mod-downloads"><i class="fas fa-download"></i> 1.2M</span>
+                            </div>
+                            <p class="mod-description">Полное преображение графики GTA V с новыми текстурами, эффектами освещения и погодой.</p>
+                            <div class="mod-tags">
+                                <span class="mod-tag graphics">Графика</span>
+                                <span class="mod-tag weather">Погода</span>
+                                <span class="mod-tag textures">Текстуры</span>
+                            </div>
+                            <div class="mod-actions">
+                                <a href="#" class="btn"><i class="fas fa-download"></i> Скачать</a>
+                                <a href="#" class="btn btn-outline"><i class="fas fa-info-circle"></i> Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mod-card">
+                        <img src="images/44.png" alt="Мод LSPDFR" class="mod-image">
+                        <div class="mod-content">
+                            <h3 class="mod-title">LSPD First Response</h3>
+                            <div class="mod-meta">
+                                <span class="mod-author"><i class="fas fa-user"></i> G17 Media</span>
+                                <span class="mod-version"><i class="fas fa-code-branch"></i> 0.4.9</span>
+                                <span class="mod-downloads"><i class="fas fa-download"></i> 890K</span>
+                            </div>
+                            <p class="mod-description">Станьте полицейским Лос-Сантоса! Полноценный мод с патрулированием, арестами и спецоперациями.</p>
+                            <div class="mod-tags">
+                                <span class="mod-tag gameplay">Геймплей</span>
+                                <span class="mod-tag police">Полиция</span>
+                            </div>
+                            <div class="mod-actions">
+                                <a href="#" class="btn"><i class="fas fa-download"></i> Скачать</a>
+                                <a href="#" class="btn btn-outline"><i class="fas fa-info-circle"></i> Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mod-card">
+                        <img src="images/43.jpg" alt="Мод Addon Cars" class="mod-image">
+                        <div class="mod-content">
+                            <h3 class="mod-title">Addon Cars Pack</h3>
+                            <div class="mod-meta">
+                                <span class="mod-author"><i class="fas fa-user"></i> RealMods</span>
+                                <span class="mod-version"><i class="fas fa-code-branch"></i> 3.2.1</span>
+                                <span class="mod-downloads"><i class="fas fa-download"></i> 750K</span>
+                            </div>
+                            <p class="mod-description">Коллекция из 50+ новых автомобилей с высококачественными моделями и физикой.</p>
+                            <div class="mod-tags">
+                                <span class="mod-tag vehicles">Транспорт</span>
+                                <span class="mod-tag cars">Автомобили</span>
+                            </div>
+                            <div class="mod-actions">
+                                <a href="#" class="btn"><i class="fas fa-download"></i> Скачать</a>
+                                <a href="#" class="btn btn-outline"><i class="fas fa-info-circle"></i> Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mod-card">
+                        <img src="images/42.jpg" alt="Мод GTA V Redux" class="mod-image">
+                        <div class="mod-content">
+                            <h3 class="mod-title">GTA V Redux</h3>
+                            <div class="mod-meta">
+                                <span class="mod-author"><i class="fas fa-user"></i> Josh Romito</span>
+                                <span class="mod-version"><i class="fas fa-code-branch"></i> 1.2</span>
+                                <span class="mod-downloads"><i class="fas fa-download"></i> 680K</span>
+                            </div>
+                            <p class="mod-description">Комплексный мод, улучшающий графику, физику, ИИ и геймплей GTA V.</p>
+                            <div class="mod-tags">
+                                <span class="mod-tag graphics">Графика</span>
+                                <span class="mod-tag gameplay">Геймплей</span>
+                                <span class="mod-tag physics">Физика</span>
+                            </div>
+                            <div class="mod-actions">
+                                <a href="#" class="btn"><i class="fas fa-download"></i> Скачать</a>
+                                <a href="#" class="btn btn-outline"><i class="fas fa-info-circle"></i> Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="pagination">
+                    <a href="#" class="page-link active">1</a>
+                    <a href="#" class="page-link">2</a>
+                    <a href="#" class="page-link">3</a>
+                    <a href="#" class="page-link">4</a>
+                    <a href="#" class="page-link">5</a>
+                    <a href="#" class="page-link next"><i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">Установка модов</h2>
+            <div class="section-content">
+                <div class="install-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Установка OpenIV</h3>
+                            <p>Скачайте и установите OpenIV - основной инструмент для работы с модами GTA V.</p>
+                            <a href="#" class="btn btn-small"><i class="fas fa-download"></i> Скачать OpenIV</a>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Создание резервной копии</h3>
+                            <p>Перед установкой модов сделайте резервные копии оригинальных файлов игры.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Установка Script Hook V</h3>
+                            <p>Большинству модов требуется Script Hook V для работы скриптов.</p>
+                            <a href="#" class="btn btn-small"><i class="fas fa-download"></i> Скачать Script Hook V</a>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Установка модов</h3>
+                            <p>Следуйте инструкциям для каждого конкретного мода. Обычно файлы нужно поместить в папку "mods" (если используется OpenIV) или в корневую папку игры.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h3>Запуск игры</h3>
+                            <p>Запустите игру через обычный ярлык. Для некоторых модов могут потребоваться дополнительные шаги.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="warning-box">
+                    <div class="warning-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="warning-content">
+                        <h3>Важно!</h3>
+                        <p>Использование модов в GTA Online может привести к бану вашего аккаунта. Устанавливайте моды только для одиночной игры и отключайте их перед входом в онлайн-режим.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p class="footer-text">© 2025 GTA V Portal. Все права защищены.</p>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
